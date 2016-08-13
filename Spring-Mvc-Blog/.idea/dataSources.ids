@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="theprojectdb" uuid="65b7c7c8-9f6b-4178-b93e-da169d185c4e">
+    <database-info product="MySQL" version="5.5.5-10.1.13-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="theprojectdb">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="blog"/>
+      <schema id="3" name="blog1"/>
+      <schema id="4" name="blog_db"/>
+      <schema id="5" name="information_schema"/>
+      <schema id="6" name="javablogdb"/>
+      <schema id="7" name="mysql"/>
+      <schema id="8" name="performance_schema"/>
+      <schema id="9" name="phpmyadmin"/>
+      <schema id="10" name="test"/>
+      <schema id="11" name="uprajnenie"/>
+      <table id="12" parent="1" name="posts"/>
+      <table id="13" parent="1" name="topics"/>
+      <table id="14" parent="1" name="topics_posts"/>
+      <table id="15" parent="1" name="users"/>
+      <column id="16" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="17" parent="12" name="author_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="18" parent="12" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)|0</data-type>
+      </column>
+      <column id="19" parent="12" name="content">
+        <mandatory>1</mandatory>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="20" parent="12" name="date">
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+        <default-expression>CURRENT_TIMESTAMP</default-expression>
+      </column>
+      <key id="21" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="22" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="23" parent="13" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <key id="24" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="25" parent="14" name="topics_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="26" parent="14" name="posts_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="27" parent="14" name="PRIMARY">
+        <columns>topics_id
+posts_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="28" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="29" parent="15" name="firstname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="30" parent="15" name="passwordhash">
+        <mandatory>1</mandatory>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="31" parent="15" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="32" parent="15" name="lastname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <key id="33" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
