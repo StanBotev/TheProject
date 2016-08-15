@@ -5,6 +5,7 @@ import javax.validation.constraints.AssertFalse;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.commons.validator.routines.EmailValidator;
+import org.hibernate.validator.constraints.Email;
 
 public class RegisterForm {
     @NotNull
@@ -12,25 +13,16 @@ public class RegisterForm {
     private String username;
 
     @NotNull
-    @AssertFalse (message = "Please provide first name and last name")
-    public boolean areThereTwoNames() {
-        String[] names = fullName.split(" ");
-        if (names.length < 2) {
-            return false;
-        }
-        return true;
-    }
-    private String fullName;
+    @Size(min=2, max=30, message = "First name should be in the range [2...30]")
+    private String firstName;
 
     @NotNull
-    @AssertFalse (message = "Please provide a valid email address")
-    public boolean isValidEmail() {
-        boolean valid = EmailValidator.getInstance().isValid(email);
-        if (valid == true) {
-            return true;
-        }
-        return false;
-    }
+    @Size(min=2, max=30, message = "Last name should be in the range [2...30]")
+    private String lastName;
+
+    @NotNull
+    @Email (message = "Please provide a valid email address")
+    @Size(min=1, max=50 , message = "Please provide a valid email address")
     private String email;
 
     @NotNull
@@ -55,12 +47,20 @@ public class RegisterForm {
         this.username = username;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {

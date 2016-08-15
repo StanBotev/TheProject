@@ -34,7 +34,7 @@ public class RegisterController {
         }
 
         if (!userService.register(
-                registerForm.getUsername(), registerForm.getFullName(), registerForm.getEmail(), registerForm.getPassword(), registerForm.getConfirmPassword())) {
+                registerForm.getUsername(), registerForm.getFirstName(), registerForm.getLastName(), registerForm.getEmail(), registerForm.getPassword(), registerForm.getConfirmPassword())) {
             notifyService.addErrorMessage("Invalid registration details!");
             return "users/register";
         }

@@ -11,4 +11,7 @@ public class UserServiceStubImpl implements UserService {
         // Provide a sample password check: username == password
         return Objects.equals(username, password);
     }
+    public boolean register(String username, String firstName, String lastName, String email, String password, String confirmPassword) {
+        return true;
+    }
 }
