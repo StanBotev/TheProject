@@ -32,7 +32,7 @@ public class LoginController {
             return "users/login";
         }
 
-        if (!userService.authenticate(
+        if (!userService.authenticate try(
                 loginForm.getUsername(), loginForm.getPassword())) {
             notifyService.addErrorMessage("Invalid login!");
             return "users/login";
@@ -41,5 +41,6 @@ public class LoginController {
         notifyService.addInfoMessage("Login successful");
         return "redirect:/";
     }
+
 }
 
