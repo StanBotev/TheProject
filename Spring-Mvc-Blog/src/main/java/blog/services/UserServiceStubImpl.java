@@ -42,4 +42,7 @@ public class UserServiceStubImpl implements UserService {
         }
         return login;
     }
+    public boolean register(String username, String firstName, String lastName, String email, String password, String confirmPassword) {
+        return true;
+    }
 }

@@ -38,8 +38,14 @@
         </dependency>
 
         <dependency>
+<<<<<<< HEAD
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
+=======
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.5.1</version>
+>>>>>>> Registration-Creation
         </dependency>
 
     </dependencies>
