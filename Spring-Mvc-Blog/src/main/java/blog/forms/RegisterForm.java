@@ -4,7 +4,6 @@ package blog.forms;
 import javax.validation.constraints.AssertFalse;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import org.apache.commons.validator.routines.EmailValidator;
 import org.hibernate.validator.constraints.Email;
 
 public class RegisterForm {

@@ -1,14 +1,16 @@
 package blog.services;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
 import java.util.Objects;
 
 @Service
+@Primary
 public class UserServiceStubImpl implements UserService {
 
-    public boolean authenticate(String username, String password) throws SQLException {
+    public boolean authenticate(String username, String password) {
         String query;
         String dbUsername, dbPassword;
         boolean login = false;
